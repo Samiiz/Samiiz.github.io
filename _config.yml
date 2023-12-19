@@ -164,7 +164,7 @@ lang: "ko"  # default lang is en
 #   home:
 heading: "Samizz_DeVelog_Field"
 subheading: "Let's develop together and advise each other!"
-banner: "https://avatars.githubusercontent.com/u/153697942?v=4"
+banner: "banners/minimalism_circles_reflections_93161_1920x1080.jpg"
 
 # Banner default settings
 # These banner settings are for global banner default, but you can also
@@ -174,7 +174,7 @@ banner: "https://avatars.githubusercontent.com/u/153697942?v=4"
 #   loop: true              # Video loop
 #   volume: 0               # Video volume (100% is 1.0)
 #   start_at: 0             # Video start time
-image: "banners/minimalism_circles_reflections_93161_1920x1080.jpg"             # Image banner source
+#   image: null             # Image banner source
 #   opacity: 1.0            # Banner opacity (100% is 1.0)
 #   background: "rgba(0, 0, 0, 0.8)"  # Banner background (Could be a image)
 #   height: "640px"         # Banner default height
