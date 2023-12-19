@@ -162,9 +162,9 @@ lang: "ko"  # default lang is en
 # Page default value
 # defaults:
 #   home:
-    heading: "Samizz_DeVelog_Foeld"
-    subheading: "Let's develop together and advise each other!"
-    banner: "https://avatars.githubusercontent.com/u/153697942?v=4"
+    # heading: "Samizz_DeVelog_Foeld"
+    # subheading: "Let's develop together and advise each other!"
+    # banner: "https://avatars.githubusercontent.com/u/153697942?v=4"
 
 # Banner default settings
 # These banner settings are for global banner default, but you can also
