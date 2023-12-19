@@ -162,7 +162,7 @@ lang: "ko"  # default lang is en
 # Page default value
 # defaults:
 #   home:
-heading: "Samizz_DeVelog_Field"
+heading: "Samiiz_DeVelog_Field"
 subheading: "Let's develop together and advise each other!"
 banner: "banners/minimalism_circles_reflections_93161_1920x1080.jpg"
 
