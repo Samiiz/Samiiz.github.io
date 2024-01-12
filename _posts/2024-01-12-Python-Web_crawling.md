@@ -15,7 +15,7 @@ banner:
 tags: [Python, Crawling]
 ---
 
-# Web Crowling
+## Web Crowling
 ## 웹 크롤링(Web Crawling)
 **웹 크롤링이란 웹상의 정보들을 탐색하고 수집하는 작업을 의미합니다.**  
   
