@@ -160,11 +160,11 @@ lang: "ko"  # default lang is en
 #   - about.md
 
 # Page default value
-# defaults:
-#   home:
-#     heading: "Your awesome heading"
-#     subheading: "Your awesome subheading"
-#     banner: "Your image url"
+defaults:
+  home:
+    heading: "Samiiz_DeVelog_Field"
+    subheading: "Let's develop together and advise each other!"
+    banner: "banners/minimalism_circles_reflections_93161_1920x1080.jpg"
 
 # Banner default settings
 # These banner settings are for global banner default, but you can also
