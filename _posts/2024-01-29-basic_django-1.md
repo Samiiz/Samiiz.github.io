@@ -1,6 +1,6 @@
 ---
 layout: post
-title: basic django 1
+title: Basic Django 1
 subtitle: learn basic django
 author: Samiiz
 categories: [Python, django]
