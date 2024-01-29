@@ -1,7 +1,7 @@
 ---
 layout: post
 title: basic django 1
-subtitle: about Web Crawling
+subtitle: learn basic django
 author: Samiiz
 categories: [Python, django]
 banner:
