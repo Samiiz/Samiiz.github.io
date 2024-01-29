@@ -15,7 +15,7 @@ banner:
 tags: [Python, django, basic]
 ---
 
-# django
+## django
 <br/>
 
 django란 Python의 오픈소스 웹프레임워크이며 풀 스택 프레임워크입니다.  
@@ -24,7 +24,7 @@ django란 Python의 오픈소스 웹프레임워크이며 풀 스택 프레임�
 
 <br/>
 
-## 설치
+### 설치
 <br/>
 
 설치를 하는 방법은 생각보다 간단합니다.  
@@ -32,7 +32,7 @@ django란 Python의 오픈소스 웹프레임워크이며 풀 스택 프레임�
 
 <br/>
 
-### 가상환경
+#### 가상환경
 <br/>
 
 가상환경에서 pip를 사용하여 설치하려면 터미널을 열고,
@@ -45,7 +45,7 @@ pip install django
 
 <br/>  
 
-### Python버전
+#### Python버전
 <br/>
 
 Python 버전별로 설치를 할 수 있습니다.  
@@ -60,7 +60,7 @@ python3 install django
 
 <br/>
 
-## django 실행
+### django 실행
 <br/>  
 
 [설치방법](#설치)으로 django를 설치 한 후  
@@ -120,7 +120,7 @@ Quit the server with CONTROL-C.
 
 <br/>
 
-## 마치며
+### 마치며
 <br/>
 
 이번 포스팅에는 Django가 무엇인지, 어떻게 설치하고 어떻게 실행하는지에 대해 알아보았습니다.  
