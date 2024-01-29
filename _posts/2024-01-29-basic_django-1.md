@@ -113,7 +113,7 @@ Quit the server with CONTROL-C.
 
 자 이제 브라우저 주소창에 'http://127.0.0.1:8000/'를 입력하고 들어가면
 
-<img src="../posting_images/django/django-none.png" width="600px" height="400px">
+<img src="https://github.com/Samiiz/Samiiz.github.io/blob/master/posting_images/django/django-none.png?raw=true" width="600px" height="400px">
 
 이런 화면이 나오게 되면 성공입니다.  
 자 이제 터미널로 돌아가서 "CONTROL + C" 를 입력하여 서버를 종료합시다.
