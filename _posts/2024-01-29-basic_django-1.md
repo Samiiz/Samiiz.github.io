@@ -16,24 +16,24 @@ tags: [Python, django, basic]
 ---
 
 # django
-</br>
+<br/>
 
 django란 Python의 오픈소스 웹프레임워크이며 풀 스택 프레임워크입니다.  
 오늘은 django를 사용하는데 필요한 기초 지식과  
 사용하면서 느낀점을 적어보려고 합니다.
 
-</br>
+<br/>
 
 ## 설치
-</br>
+<br/>
 
 설치를 하는 방법은 생각보다 간단합니다.  
 (저는 애플 실리콘 맥북이기 때문에 맥OS 기준으로 설명하겠습니다.)
 
-</br>
+<br/>
 
 ### 가상환경
-</br>
+<br/>
 
 가상환경에서 pip를 사용하여 설치하려면 터미널을 열고,
 
@@ -43,10 +43,10 @@ pip install django
 
 이렇게 코드를 입력하여 실행하면 됩니다.  
 
-</br>  
+<br/>  
 
 ### Python버전
-</br>
+<br/>
 
 Python 버전별로 설치를 할 수 있습니다.  
 터미널을 열고,
@@ -58,10 +58,10 @@ python3 install django
 
 이렇게 코드를 입력하여 실행하면 됩니다.
 
-</br>
+<br/>
 
 ## django 실행
-</br>  
+<br/>  
 
 [설치방법](#설치)으로 django를 설치 한 후  
 프로젝트를 생성하려는 위치에서 터미널을 열고,  
@@ -76,7 +76,7 @@ djanggo-admin startproject config .
 예를 들어 'config .' 으로 진행 시 'manage.py'와 'config'폴더가 생성됩니다.  
 이제 터미널에서  
 
-</br>
+<br/>
 
 ```zsh
 {설치시 사용한 방법} manage.py runserver
@@ -109,7 +109,7 @@ Quit the server with CONTROL-C.
 ```
 
 입니다.  
-</br>
+<br/>
 
 자 이제 브라우저 주소창에 'http://127.0.0.1:8000/'를 입력하고 들어가면
 
@@ -118,10 +118,10 @@ Quit the server with CONTROL-C.
 이런 화면이 나오게 되면 성공입니다.  
 자 이제 터미널로 돌아가서 "CONTROL + C" 를 입력하여 서버를 종료합시다.
 
-</br>
+<br/>
 
 ## 마치며
-</br>
+<br/>
 
 이번 포스팅에는 Django가 무엇인지, 어떻게 설치하고 어떻게 실행하는지에 대해 알아보았습니다.  
 
