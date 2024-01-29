@@ -60,7 +60,7 @@ python3 install django
 
 <br/>
 
-### django 실행
+### 실행
 <br/>  
 
 [설치방법](#설치)으로 django를 설치 한 후  
@@ -109,6 +109,9 @@ Quit the server with CONTROL-C.
 ```
 
 입니다.  
+<br/>
+
+#### 브라우저 확인
 <br/>
 
 자 이제 브라우저 주소창에 'http://127.0.0.1:8000/'를 입력하고 들어가면
