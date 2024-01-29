@@ -119,7 +119,7 @@ Quit the server with CONTROL-C.
 
 <br/>
 
-### 마치며
+## 마치며
 <br/>
 
 이번 포스팅에는 Django가 무엇인지, 어떻게 설치하고 어떻게 실행하는지에 대해 알아보았습니다.  
