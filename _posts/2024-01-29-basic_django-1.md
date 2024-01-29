@@ -110,7 +110,7 @@ Quit the server with CONTROL-C.
 #### 브라우저 확인
 <br/>
 
-자 이제 브라우저 주소창에 'http://127.0.0.1:8000/'를 입력하고 들어가면
+자 이제 브라우저 주소창에 ["http://127.0.0.1:8000/"](http://127.0.0.1:8000/)를 입력하고 들어가면
 
 <img src="https://github.com/Samiiz/Samiiz.github.io/blob/master/posting_images/django/django-none.png?raw=true" width="600px" height="400px">
 
