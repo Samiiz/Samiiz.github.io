@@ -35,7 +35,7 @@ Execution -> 해석된 명렁어를 토대로 ALU가 명령어에 대한 연산�
 
 ### CPU
 
-<img src="https://github.com/Samiiz/Samiiz.github.io/blob/master/posting_images/OS/hardware_structure.gif?raw=true" width="600px" height="400px">
+<img src="https://github.com/Samiiz/Samiiz.github.io/blob/master/posting_images/OS/hardware_structure.gif?raw=true">
 
 #### 1. ALU (Arithmetic and logical unit)
 
@@ -139,7 +139,7 @@ while True:
 
 이러한 코드를 작성하고 실행했을 때
 
-<img src="https://github.com/Samiiz/Samiiz.github.io/blob/master/posting_images/OS/hardware_interrupt_test.gif?raw=true" width="600px" height="400px">
+<img src="https://github.com/Samiiz/Samiiz.github.io/blob/master/posting_images/OS/hardware_interrupt_test.gif?raw=true">
 
 위의 영상 처럼 while문 실행 중간에 control + C 로  
 하드웨어 인터럽트를 확인 할 수 있다.
