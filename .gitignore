@@ -4,4 +4,4 @@
 _site
 Gemfile.lock
 .DS_Store
-_posts/@normal.md
+_posts/@*.md
