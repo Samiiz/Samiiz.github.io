@@ -1,0 +1,1 @@
+Sitemap: https://samiiz.github.io/jekyll-theme-yat/sitemap.xml

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://samiiz.github.io/jekyll-theme-yat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://samiiz.github.io/jekyll-theme-yat/" rel="alternate" type="text/html" hreflang="ko" /><updated>2024-10-13T07:22:38+00:00</updated><id>https://samiiz.github.io/jekyll-theme-yat/feed.xml</id><title type="html">Samiiz_DeVelog</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Samiiz</name></author><entry><title type="html">Hardware_Structure</title><link href="https://samiiz.github.io/jekyll-theme-yat/os/2024/03/14/hardware_structure-1.html" rel="alternate" type="text/html" title="Hardware_Structure" /><published>2024-03-14T00:00:00+00:00</published><updated>2024-03-14T00:00:00+00:00</updated><id>https://samiiz.github.io/jekyll-theme-yat/os/2024/03/14/hardware_structure-1</id><content type="html" xml:base="https://samiiz.github.io/jekyll-theme-yat/os/2024/03/14/hardware_structure-1.html"><![CDATA[<h2 id="hardware_structure">hardware_structure</h2>
+
+<p>시작하기 전에 프로그램의 실행 과정을 먼저 이해하고 넘어가자.</p>
+
+<p>프로그램의 실행 과정은 크게 세 가지로 나뉜다.</p>
+
+<p>우리가 프로그래밍 언어로 코드를 짜고 컴파일하면,<br />
+컴파일러에 의해 기계 친화적인 어셈블리 코드로 변환된다.<br />
+또한 여기서 다시 한 번 컴파일러를 거쳐 바이너리 코드로 변경되어 실행된다.</p>
+
+<p>실행 파일을 실행하면 메인 메모리에 순차적으로 명령어가 저장되고,<br />
+또한 차례대로 CPU로 이동된 후 명령어들이 실행된다.</p>
+
+<p>여기서 명령어를 실행할 때<br />
+Fetch -&gt; 레지스터를 이용해 명령어를 저장하고,<br />
+Decode -&gt; CU를 통해 명령어를 해석하고,<br />
+Execution -&gt; 해석된 명령어를 토대로 ALU가 명령어에 대한 연산을 한다.</p>
+
+<h3 id="cpu">CPU</h3>
+
+<p><img src="https://github.com/Samiiz/Samiiz.github.io/blob/master/posting_images/OS/hardware_structure.gif?raw=true" /></p>
+
+<h4 id="1-alu-arithmetic-and-logical-unit">1. ALU (Arithmetic and Logical Unit)</h4>
+
+<p>CU에게 전달받은 바이너리 코드를 기준으로,<br />
+기본적인 연산을 담당하며,<br />
+산술 연산과 논리 연산을 수행한다.</p>
+
+<p>ALU는 산술 논리 연산 장치라고도 한다.</p>
+
+<h4 id="2-cu-control-unit">2. CU (Control Unit)</h4>
+
+<p>레지스터를 통해 명령어가 전달되면 명령어를 해석한다.<br />
+해석된 결과를 ALU에게 전달한다.</p>
+
+<p>CU는 명령 해석 장치라고도 한다.</p>
+
+<h4 id="3-register-set">3. Register Set</h4>
+
+<p>ALU가 연산 중일 때 다음 작업을 임시로 저장한다.</p>
+
+<p>주요 레지스터</p>
+
+<ul>
+  <li>프로그램 카운터 (Program Counter)
+    <ul>
+      <li>메모리에 실행될 다음 명령의 주소를 저장</li>
+    </ul>
+  </li>
+  <li>인스트럭션 레지스터 (Instruction Register)
+    <ul>
+      <li>이제 해석해야 하는 명령어를 저장</li>
+    </ul>
+  </li>
+  <li>어드레스 레지스터 (Address Register)
+    <ul>
+      <li>메모리의 주소를 저장</li>
+    </ul>
+  </li>
+  <li>버퍼 레지스터 (Buffer Register)
+    <ul>
+      <li>읽거나 쓰려는 명령어를 저장</li>
+    </ul>
+  </li>
+  <li>플래그 레지스터 (Flag Register)
+    <ul>
+      <li>연산 결과나 CPU 상태의 부가 정보 저장</li>
+    </ul>
+  </li>
+  <li>스택 포인터 (Stack Pointer)
+    <ul>
+      <li>스택에 마지막으로 저장한 값의 위치를 저장</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Register는 임시 저장 장치라고도 한다.</p>
+
+<h3 id="main-memory">Main Memory</h3>
+
+<p>메모리는 CPU가 연산을 하거나 명령을 실행하는 데 필요한 정보를 저장하는 공간을 말한다.</p>
+
+<p>그 중 메인 메모리는 RAM과 ROM 같은 휘발성 및 비휘발성 메모리이며,<br />
+CPU가 데이터 버스를 통해 엑세스할 수 있다.</p>
+
+<p>속도는 빠르지만 전원이 꺼지면 데이터가 지워지기 때문에,<br />
+현재 실행 중인 프로그램 또는 처리 중인 데이터에 대한 결과를 저장하고,<br />
+보조 메모리로부터 일정 데이터를 받아 저장하여,<br />
+CPU가 필요로 할 때 바로 정보를 전달한다.</p>
+
+<h4 id="main-memory와-auxiliary-memory의-차이">Main Memory와 Auxiliary Memory의 차이</h4>
+
+<ul>
+  <li>Main Memory
+    <ul>
+      <li>데이터 버스를 통해 액세스 가능</li>
+      <li>휘발성 및 비휘발성 메모리이다.</li>
+      <li>ROM, RAM이 그에 해당한다.</li>
+    </ul>
+  </li>
+  <li>Auxiliary Memory
+    <ul>
+      <li>프로세스에 바로 접속 불가능 기본 메모리로 복사되고, 입출력 채널을 통해 액세스 가능</li>
+      <li>항상 비휘발성 메모리이다.</li>
+      <li>HDD, SSD 등이 그에 해당한다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="bus-system">Bus System</h3>
+
+<p>데이터를 이동하는 데 사용되는 전송 경로이다.</p>
+
+<p>구성 요소로는<br />
+데이터 버스: 데이터 이동을 위해 필요한 버스(경로)<br />
+컨트롤 버스: CPU가 원하는 바를 메모리에 전달하기 위한 버스(경로)<br />
+어드레스 버스: 주소값을 이동하기 위해 필요한 버스(경로)</p>
+
+<h3 id="interrupt">Interrupt</h3>
+
+<p>인터럽트란 CPU가 작업을 수행하고 있을 때 작업을 방해하는 신호를 말한다.<br />
+인터럽트는 크게 두 가지로 나뉜다.<br />
+CPU 인터럽트와 Hardware 인터럽트이다.</p>
+
+<p>CPU 인터럽트는 정상적으로 수행할 수 없는 명령어가 입력되면,<br />
+CPU는 인터럽트를 발생시킨다 -&gt; 예외</p>
+
+<p>하드웨어(비동기) 인터럽트는 입출력 장치(하드웨어)로부터 발생하는 인터럽트이다.</p>
+
+<p>이러한 인터럽트를 처리하기 위해 특정 인터럽트 신호에 대해 미리 정의된 프로그램 또는 함수를 인터럽트 서비스 루틴(인터럽트 핸들러)라고 한다.</p>
+
+<p>하드웨어 인터럽트의 예시를 들자면</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">time</span><span class="p">,</span> <span class="n">signal</span>
+
+<span class="k">def</span> <span class="nf">handler</span><span class="p">(</span><span class="n">signum</span><span class="p">,</span> <span class="n">frame</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">키보드 인터럽트 감지!!</span><span class="sh">"</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">신호 번호: </span><span class="sh">"</span><span class="p">,</span> <span class="n">signum</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">스택 프레임: </span><span class="sh">"</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+    <span class="nf">exit</span><span class="p">()</span>
+
+<span class="n">signal</span><span class="p">.</span><span class="nf">signal</span><span class="p">(</span><span class="n">signal</span><span class="p">.</span><span class="n">SIGINT</span><span class="p">,</span> <span class="n">handler</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">===5초마다 출력!!===</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>이러한 코드를 작성하고 실행했을 때,</p>
+
+<p><img src="https://github.com/Samiiz/Samiiz.github.io/blob/master/posting_images/OS/hardware_interrupt_test.gif?raw=true" /></p>
+
+<p>while문 실행 중간에 control + C로<br />
+하드웨어 인터럽트를 확인할 수 있습니다.</p>
+
+<h2 id="마치며">마치며</h2>
+
+<p>저는 OS에 대한 이해를 하려고 공부하면서,<br />
+지금까지 당연하다고 생각되었던 내용들이<br />
+전부 이러한 기초 과정들을 통해 이루어진다는 것을 알게 되어<br />
+신기하면서도 재미가 있었습니다.</p>
+
+<p>다음 포스팅에서는 프로세스에 대하여 알아보도록 하겠습니다.</p>
+
+<blockquote>
+  <p><u>배움은 젊음의 샘이다.
+아무리 나이가 많이 들었더라도 배움을 멈추지 마라. -도교</u></p>
+</blockquote>]]></content><author><name>Samiiz</name></author><category term="OS" /><category term="CPU" /><summary type="html"><![CDATA[hardware_structure]]></summary></entry><entry><title type="html">Basic Django 1</title><link href="https://samiiz.github.io/jekyll-theme-yat/python/django/2024/01/29/basic_django-1.html" rel="alternate" type="text/html" title="Basic Django 1" /><published>2024-01-29T00:00:00+00:00</published><updated>2024-01-29T00:00:00+00:00</updated><id>https://samiiz.github.io/jekyll-theme-yat/python/django/2024/01/29/basic_django-1</id><content type="html" xml:base="https://samiiz.github.io/jekyll-theme-yat/python/django/2024/01/29/basic_django-1.html"><![CDATA[<h2 id="django">django</h2>
+<p><br /></p>
+
+<p>django란 Python의 오픈소스 웹프레임워크이며 풀 스택 프레임워크입니다.<br />
+오늘은 django를 사용하는데 필요한 기초 지식과<br />
+사용하면서 느낀점을 적어보려고 합니다.</p>
+
+<p><br /></p>
+
+<h3 id="설치">설치</h3>
+<p><br /></p>
+
+<p>설치를 하는 방법은 생각보다 간단합니다.<br />
+(저는 애플 실리콘 맥북이기 때문에 맥OS 기준으로 설명하겠습니다.)</p>
+
+<h4 id="가상환경">가상환경</h4>
+<p><br /></p>
+
+<p>가상환경에서 pip를 사용하여 설치하려면 터미널을 열고,</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>django
+</code></pre></div></div>
+
+<p>이렇게 코드를 입력하여 실행하면 됩니다.</p>
+
+<h4 id="python버전">Python버전</h4>
+<p><br /></p>
+
+<p>Python 버전별로 설치를 할 수 있습니다.<br />
+터미널을 열고,</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nb">install </span>django
+python3 <span class="nb">install </span>django
+</code></pre></div></div>
+
+<p>이렇게 코드를 입력하여 실행하면 됩니다.</p>
+
+<h3 id="실행">실행</h3>
+<p><br /></p>
+
+<p><a href="#설치">설치방법</a>으로 django를 설치 한 후<br />
+프로젝트를 생성하려는 위치에서 터미널을 열고,</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>djanggo-admin startproject <span class="o">{</span>시작하려는 프로젝트 이름<span class="o">}</span>
+<span class="c"># 보통의 경우 'config .' 으로 사용한다.</span>
+djanggo-admin startproject config <span class="nb">.</span>
+</code></pre></div></div>
+
+<p>이렇게 코드를 입력 시 해당 프로젝트의 이름은 한 python파일과 폴더가 생성됩니다.<br />
+예를 들어 ‘config .’ 으로 진행 시 ‘manage.py’와 ‘config’폴더가 생성됩니다.<br />
+이제 터미널에서</p>
+
+<p><br /></p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">{</span>설치시 사용한 방법<span class="o">}</span> manage.py runserver
+<span class="c"># 저는 python3로 설치하였기 때문에</span>
+python3 manage.py runserver
+</code></pre></div></div>
+
+<p>이렇게 실행시</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Watching <span class="k">for </span>file changes with StatReloader
+Performing system checks...
+
+System check identified no issues <span class="o">(</span>0 silenced<span class="o">)</span><span class="nb">.</span>
+
+You have 18 unapplied migration<span class="o">(</span>s<span class="o">)</span><span class="nb">.</span> Your project may not work properly <span class="k">until </span>you apply the migrations <span class="k">for </span>app<span class="o">(</span>s<span class="o">)</span>: admin, auth, contenttypes, sessions.
+Run <span class="s1">'python manage.py migrate'</span> to apply them.
+January 29, 2024 - 04:34:21
+Django version 5.0.1, using settings <span class="s1">'config.settings'</span>
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+</code></pre></div></div>
+
+<p>이런 문구가 나옵니다.<br />
+간단하게 설명하자면</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'manage.py'가 실행되었고 마이그레이션이 안되어있다.(현재는 무시해도 무관)  
+실행시간, django의 버전, 로컬의 8000번 포트에서 실행중, CONTROL-C를 이용해 종료 가능
+</code></pre></div></div>
+
+<p>입니다.</p>
+
+<h4 id="브라우저-확인">브라우저 확인</h4>
+<p><br /></p>
+
+<p>자 이제 브라우저 주소창에 <a href="http://127.0.0.1:8000/">“http://127.0.0.1:8000/”</a>를 입력하고 들어가면</p>
+
+<p><img src="https://github.com/Samiiz/Samiiz.github.io/blob/master/posting_images/django/django-none.png?raw=true" width="600px" height="400px" /></p>
+
+<p>이런 화면이 나오게 되면 성공입니다.<br />
+자 이제 터미널로 돌아가서 “CONTROL + C” 를 입력하여 서버를 종료합시다.</p>
+
+<p><br /></p>
+
+<h2 id="마치며">마치며</h2>
+<p><br /></p>
+
+<p>이번 포스팅에는 Django가 무엇인지, 어떻게 설치하고 어떻게 실행하는지에 대해 알아보았습니다.</p>
+
+<p>저는  django를 배우고, 사용해보면서 어렵지만  이미 완성되있는 프레임워크를 사용하기 때문에<br />
+기초지식과 내가 사용해야하는 부분만 잘 알고있다면 정말 간단하고 멋진 웹을 만들 수 있겠구나 생각했습니다.</p>
+
+<blockquote>
+  <p><u>배움은 젊음의 샘이다.
+아무리 나이가 많이 들었더라도 배움을 멈추지 마라. -도교</u></p>
+</blockquote>
+
+<p>다음 포스팅에는 서버를 실행하고,<br />
+간단하게 서버에 다양한 화면들을 만들어 보도록 하겠습니다.</p>]]></content><author><name>Samiiz</name></author><category term="Python" /><category term="django" /><category term="Python" /><category term="django" /><category term="basic" /><summary type="html"><![CDATA[django]]></summary></entry><entry><title type="html">Web Crawling</title><link href="https://samiiz.github.io/jekyll-theme-yat/python/2024/01/12/Python-Web_crawling.html" rel="alternate" type="text/html" title="Web Crawling" /><published>2024-01-12T00:00:00+00:00</published><updated>2024-01-12T00:00:00+00:00</updated><id>https://samiiz.github.io/jekyll-theme-yat/python/2024/01/12/Python-Web_crawling</id><content type="html" xml:base="https://samiiz.github.io/jekyll-theme-yat/python/2024/01/12/Python-Web_crawling.html"><![CDATA[<h2 id="web-crowling">Web Crowling</h2>
+<h2 id="웹-크롤링web-crawling">웹 크롤링(Web Crawling)</h2>
+<p><strong>웹 크롤링이란 웹상의 정보들을 탐색하고 수집하는 작업을 의미합니다.</strong></p>
+
+<p>“개발자 도구”를 사용해본 경험이 있으십니까?</p>
+
+<p>저는 자주 사용하는 네이버와 구글 사이트에서 개발자 도구를 처음 실행시켰을 때 머리가 아팠습니다.<br />
+당연히도 제가 로컬에서 만든 아주 간단한 HTML파일과는 차원이 달랐기 때문입니다.<br />
+그 안에는 방대한 양의 정보들이 담겨있었고 또 우리는 볼 수 없는 정보들도 있었습니다.<br />
+그러한 정보뭉치들 사이에서 원하는 정보를 바로바로 찾고 가져오기란 쉽지 않습니다.</p>
+
+<p>그래서 웹 크롤러(Crawler)가 생겨났습니다.</p>
+
+<h3 id="크롤러crawler">크롤러(Crawler)</h3>
+<p><strong>크롤러</strong>는 화면에 노출된 정보를 수집해주는 소프트웨어입니다.</p>
+
+<p>자세히 말하자면<br />
+크롤러는 웹상을 돌아다니며 방대한 양의 정보들을 수집하고<br />
+실시간으로 정보를 수집하기 위해 지속적으로 작동되어<br />
+<strong>특정 키워드</strong>에 대한 <strong>심층분석</strong>에 유용하고 <strong>자주 변화하는 데이터</strong>를 파악하기에 좋습니다.</p>
+
+<p>그러므로 크롤러를 이용하면    <br />
+개발자도구의 요소선택기를 사용하여 원하는 정보들을 일일히 확인하고 파악해서<br />
+하나하나 정보를 타이핑 하는 일은 없어집니다.</p>
+
+<h3 id="주의----웹-스크래핑--웹-크롤링">주의!    웹 스크래핑 != 웹 크롤링</h3>
+
+<p>웹 스크래핑은 웹 크롤링과는 다른 개념이므로 표현에 주의해야 합니다!</p>
+
+<p>웹 스크래핑은 <strong>스크래퍼 봇</strong>을 통하여 특정 웹에서 필요한 데이터를 자동으로 수집하는 것 입니다.<br />
+정확한 정보를 요구할때 사용합니다.</p>
+
+<p><strong>웹 크롤링과 웹 스크래핑의 차이점</strong></p>
+
+<p><img src="/posting_images/크롤링%20스크래핑%20차이.png" alt="table" title="table image" /></p>]]></content><author><name>Samiiz</name></author><category term="Python" /><category term="Python" /><category term="Crawling" /><summary type="html"><![CDATA[Web Crowling 웹 크롤링(Web Crawling) 웹 크롤링이란 웹상의 정보들을 탐색하고 수집하는 작업을 의미합니다. “개발자 도구”를 사용해본 경험이 있으십니까? 저는 자주 사용하는 네이버와 구글 사이트에서 개발자 도구를 처음 실행시켰을 때 머리가 아팠습니다. 당연히도 제가 로컬에서 만든 아주 간단한 HTML파일과는 차원이 달랐기 때문입니다. 그 안에는 방대한 양의 정보들이 담겨있었고 또 우리는 볼 수 없는 정보들도 있었습니다. 그러한 정보뭉치들 사이에서 원하는 정보를 바로바로 찾고 가져오기란 쉽지 않습니다.]]></summary></entry><entry><title type="html">The Firstep of markdown</title><link href="https://samiiz.github.io/jekyll-theme-yat/markdown/2023/12/19/The-First_step.html" rel="alternate" type="text/html" title="The Firstep of markdown" /><published>2023-12-19T00:00:00+00:00</published><updated>2023-12-19T00:00:00+00:00</updated><id>https://samiiz.github.io/jekyll-theme-yat/markdown/2023/12/19/The-First_step</id><content type="html" xml:base="https://samiiz.github.io/jekyll-theme-yat/markdown/2023/12/19/The-First_step.html"><![CDATA[<h2 id="ah--ah--tihs-is-a-test">Ah- Ah- Tihs is a test…</h2>
+
+<p>This is my First <code class="language-plaintext highlighter-rouge">Test Markdown</code>
+I <code class="language-plaintext highlighter-rouge">hope</code> this test will succeed
+Let’s start writing a develog!!</p>]]></content><author><name>Samiiz</name></author><category term="markdown" /><category term="test" /><summary type="html"><![CDATA[Ah- Ah- Tihs is a test…]]></summary></entry></feed>
